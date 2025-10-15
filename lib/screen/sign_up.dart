@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_new_app/screen/bms_dashboard.dart';
+import 'package:my_new_app/screen/continue_user.dart';
+import 'package:my_new_app/screen/sign_welcome_back.dart';
 import 'package:my_new_app/screen/image_scan_page.dart';
+
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -73,7 +76,7 @@ class SignUp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const BmsDashboard(),
+                        builder: (context) => const SignWelcomeBack(),
                       ),
                     );
                   },
@@ -93,16 +96,16 @@ class SignUp extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Continue As EMS Personnel Button
+              // Continue As ContinueUSer
               SizedBox(
                 width: 400,
                 child: ElevatedButton(
                   onPressed: () {
-                    // 👉 Add EMS navigation here
+                    // 👉 Add Continue User
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ImageScanPage(),
+                        builder: (context) => const ContinueUser(),
                       ),
                     );
                   },

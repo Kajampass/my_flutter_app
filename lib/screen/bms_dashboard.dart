@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:my_new_app/screen/GoodbyePage.dart';
 import 'package:my_new_app/screen/continue_user.dart';
+import 'package:my_new_app/screen/image_scan_page.dart';
 
 class BmsDashboard extends StatefulWidget {
   const BmsDashboard({super.key});
@@ -37,7 +40,7 @@ class _BmsDashboardState extends State<BmsDashboard> {
               if (_formKey.currentState!.validate()) {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const ContinueUser()),
+                  MaterialPageRoute(builder: (context) => const ImageScanPage()),
                 );
               }
             },
@@ -143,7 +146,7 @@ class _BmsDashboardState extends State<BmsDashboard> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ContinueUser()),
+                              builder: (context) => const GoodbyePage()),
                         );
                       }
                     },
