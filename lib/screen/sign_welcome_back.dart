@@ -63,6 +63,8 @@ class SignWelcomeBack extends StatelessWidget {
               ),
 
               const SizedBox(height: 40),
+
+              // Get Started Button
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -90,6 +92,7 @@ class SignWelcomeBack extends StatelessWidget {
 
               const SizedBox(height: 20),
 
+              // Sign In Button
               SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
@@ -103,6 +106,57 @@ class SignWelcomeBack extends StatelessWidget {
                   ),
                   child: const Text(
                     "Sign In",
+                    style: TextStyle(fontSize: 16, color: Colors.red),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              // Continue as User Button
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BmsDashboard(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    backgroundColor: Colors.red[700],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: const Text(
+                    "Continue as User",
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              // Continue as EMS Personnel Button
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () {
+                    // TODO: Add action for EMS continuation
+                  },
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    side: const BorderSide(color: Colors.red),
+                  ),
+                  child: const Text(
+                    "Continue As EMS Personnel",
                     style: TextStyle(fontSize: 16, color: Colors.red),
                   ),
                 ),

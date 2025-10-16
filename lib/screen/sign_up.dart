@@ -76,7 +76,7 @@ class SignUp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const SignWelcomeBack(),
+                        builder: (context) => const ContinueUser(),
                       ),
                     );
                   },
@@ -117,7 +117,7 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                   child: const Text(
-                    "Continue As EMS Personnel",
+                    "Sign In",
                     style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:my_new_app/screen/GoodbyePage.dart';
 import 'package:my_new_app/screen/continue_user.dart';
 import 'package:my_new_app/screen/image_scan_page.dart';
 
-class BmsDashboard extends StatefulWidget {
-  const BmsDashboard({super.key});
+class UserProceedPage extends StatefulWidget {
+  const UserProceedPage ({super.key});
 
   @override
-  State<BmsDashboard> createState() => _BmsDashboardState();
+  State<UserProceedPage> createState() => _UserProceedPageState();
 }
 
-class _BmsDashboardState extends State<BmsDashboard> {
+class _UserProceedPageState extends State<UserProceedPage> {
   final _formKey = GlobalKey<FormState>(); // ✅ Form key
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -146,7 +145,7 @@ class _BmsDashboardState extends State<BmsDashboard> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const GoodbyePage()),
+                              builder: (context) => const ImageScanPage()),
                         );
                       }
                     },
@@ -158,7 +157,7 @@ class _BmsDashboardState extends State<BmsDashboard> {
                       ),
                     ),
                     child: const Text(
-                      "Continue as EMS Personnel",
+                      "Continue as User",
                       style: TextStyle(fontSize: 16, color: Colors.white),
                     ),
                   ),

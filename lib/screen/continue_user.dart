@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // For SVG images
 import 'package:my_new_app/screen/GoodbyePage.dart';
+import 'package:my_new_app/screen/bms_dashboard.dart';
+import 'package:my_new_app/screen/user_proceed_page.dart';
+import 'package:my_new_app/screen/sign_welcome_back.dart';
+import 'package:my_new_app/screen/user_proceed_page.dart';
+
 
 // Use this for navigation
 class ContinueUser extends StatelessWidget {
@@ -18,7 +23,7 @@ class ContinueUser extends StatelessWidget {
           },
         ),
         title: const Text(
-          "Continue As a EMS personnel",
+          "Continue as a User",
           style: TextStyle(color: Colors.red),
         ),
         actions: [
@@ -27,7 +32,7 @@ class ContinueUser extends StatelessWidget {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const GoodbyePage()),
+                MaterialPageRoute(builder: (context) => const SignWelcomeBack()),
               );
             },
           ),
@@ -89,7 +94,7 @@ class ContinueUser extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const GoodbyePage(),
+                      builder: (context) => const UserProceedPage(),
                     ),
                   );
                 },
